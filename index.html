@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Выберите дату и время — BARBER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">BARBER</a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#" class="nav__link">Услуги</a>
+        <a href="#" class="nav__link">Галерея</a>
+        <a href="#" class="nav__link">Команда</a>
+        <a href="#" class="nav__link">Отзывы</a>
+        <a href="#" class="nav__link">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <!-- СТЕППЕР -->
+    <section class="steps" aria-label="Шаги записи">
+      <div class="container steps__inner">
+
+        <div class="step step--done">
+          <div class="step__head">
+            <span class="step__circle">✓</span>
+            <span class="step__label">Мастер</span>
+          </div>
+          <span class="step__bar"></span>
+        </div>
+
+        <div class="step step--done">
+          <div class="step__head">
+            <span class="step__circle">✓</span>
+            <span class="step__label">Услуги</span>
+          </div>
+          <span class="step__bar"></span>
+        </div>
+
+        <div class="step step--active">
+          <div class="step__head">
+            <span class="step__circle">3</span>
+            <span class="step__label">Дата и время</span>
+          </div>
+          <span class="step__bar"></span>
+        </div>
+
+        <div class="step">
+          <div class="step__head">
+            <span class="step__circle">4</span>
+            <span class="step__label">Контакты</span>
+          </div>
+          <span class="step__bar"></span>
+        </div>
+
+        <div class="step">
+          <div class="step__head">
+            <span class="step__circle">5</span>
+            <span class="step__label">Подтверждение</span>
+          </div>
+          <span class="step__bar"></span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ЗАГОЛОВОК -->
+    <section class="intro">
+      <div class="container">
+        <p class="intro__eyebrow">Шаг 3 из 5</p>
+        <h1 class="intro__title">Выберите дату и время</h1>
+        <p class="intro__subtitle">Мастер: Дмитрий Орлов · услуги: стрижка и борода, 75 мин</p>
+      </div>
+    </section>
+
+    <!-- КАЛЕНДАРЬ + СЛОТЫ -->
+    <section class="booking">
+      <div class="container booking__grid">
+
+        <!-- Календарь -->
+        <div class="card calendar">
+          <div class="calendar__header">
+            <h2 class="calendar__title">Октябрь 2026</h2>
+            <div class="calendar__nav">
+              <button class="calendar__btn" type="button" aria-label="Предыдущий месяц">‹</button>
+              <button class="calendar__btn" type="button" aria-label="Следующий месяц">›</button>
+            </div>
+          </div>
+
+          <div class="calendar__weekdays">
+            <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+          </div>
+
+          <div class="calendar__days">
+            <!-- Пустые ячейки для Пн-Ср (1 октября — четверг) -->
+            <span></span><span></span><span></span>
+            <button class="day" type="button">1</button>
+            <button class="day" type="button">2</button>
+            <button class="day" type="button">3</button>
+            <button class="day" type="button">4</button>
+            <button class="day" type="button">5</button>
+            <button class="day" type="button">6</button>
+            <button class="day" type="button">7</button>
+            <button class="day" type="button">8</button>
+            <button class="day" type="button">9</button>
+            <button class="day" type="button">10</button>
+            <button class="day" type="button">11</button>
+            <button class="day" type="button">12</button>
+            <button class="day" type="button">13</button>
+            <button class="day" type="button">14</button>
+            <button class="day day--today" type="button">15</button>
+            <button class="day" type="button">16</button>
+            <button class="day" type="button">17</button>
+            <button class="day" type="button">18</button>
+            <button class="day" type="button">19</button>
+            <button class="day day--selected" type="button">20</button>
+            <button class="day" type="button">21</button>
+            <button class="day" type="button">22</button>
+            <button class="day" type="button">23</button>
+            <button class="day" type="button">24</button>
+            <button class="day" type="button">25</button>
+            <button class="day" type="button">26</button>
+            <button class="day" type="button">27</button>
+            <button class="day" type="button">28</button>
+            <button class="day" type="button">29</button>
+            <button class="day" type="button">30</button>
+            <button class="day" type="button">31</button>
+          </div>
+
+          <div class="calendar__legend">
+            <span class="legend-item"><span class="legend-dot legend-dot--selected"></span> Выбрано</span>
+            <span class="legend-item"><span class="legend-dot legend-dot--today"></span> Сегодня</span>
+          </div>
+        </div>
+
+        <!-- Свободное время -->
+        <div class="card time-panel">
+          <h2 class="time-panel__title">Свободное время</h2>
+          <p class="time-panel__date">Вторник, 20 октября</p>
+
+          <div class="time-slots">
+            <button class="slot" type="button">9:00</button>
+            <button class="slot" type="button">10:00</button>
+            <button class="slot slot--occupied" type="button" disabled>
+              <span>11:00</span>
+              <small>занято</small>
+            </button>
+            <button class="slot" type="button">12:00</button>
+            <button class="slot slot--occupied" type="button" disabled>
+              <span>13:00</span>
+              <small>занято</small>
+            </button>
+            <button class="slot slot--selected" type="button">14:00</button>
+            <button class="slot" type="button">15:00</button>
+            <button class="slot" type="button">16:00</button>
+            <button class="slot slot--occupied" type="button" disabled>
+              <span>17:00</span>
+              <small>занято</small>
+            </button>
+            <button class="slot" type="button">18:00</button>
+            <button class="slot" type="button">19:00</button>
+            <button class="slot" type="button">20:00</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ПАНЕЛЬ ДЕЙСТВИЙ -->
+    <section class="actions">
+      <div class="container actions__inner">
+        <div class="actions__info">
+          <p class="actions__label">Вы выбрали</p>
+          <p class="actions__value">Вт, 20 октября · 14:00</p>
+        </div>
+        <div class="actions__buttons">
+          <button class="btn btn--outline" type="button">Назад</button>
+          <button class="btn btn--primary" type="button">Далее</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ФУТЕР -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <div class="logo logo--light">BARBER</div>
+        <p class="footer__text">Мужские стрижки, оформление бороды и королевское бритьё в центре Москвы.</p>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__heading">Контакты</h3>
+        <p class="footer__text">ул. Садовая, 15, Москва</p>
+        <p class="footer__text footer__phone">+7 (495) 123-45-67</p>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__heading">Режим работы</h3>
+        <p class="footer__text">Пн–Пт: 9:00 – 21:00</p>
+        <p class="footer__text">Сб–Вс: 10:00 – 19:00</p>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p class="footer__copy">© 2026 BARBER. Все права защищены.</p>
+      <a href="#" class="footer__link">Политика конфиденциальности</a>
+    </div>
+  </footer>
+
+</body>
+</html>
