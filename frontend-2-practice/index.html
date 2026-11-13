@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Выберите дату и время — BARBER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">BARBER</a>
+      <nav class="nav">
+        <a href="#" class="nav__link">Услуги</a>
+        <a href="#" class="nav__link">Команда</a>
+        <a href="#" class="nav__link">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- СТЕППЕР -->
+    <section class="steps">
+      <div class="container steps__inner">
+        <div class="step step--done"><div class="step__head"><span class="step__circle">✓</span><span class="step__label">Мастер</span></div><span class="step__bar"></span></div>
+        <div class="step step--done"><div class="step__head"><span class="step__circle">✓</span><span class="step__label">Услуги</span></div><span class="step__bar"></span></div>
+        <div class="step step--active"><div class="step__head"><span class="step__circle">3</span><span class="step__label">Дата и время</span></div><span class="step__bar"></span></div>
+        <div class="step"><div class="step__head"><span class="step__circle">4</span><span class="step__label">Контакты</span></div><span class="step__bar"></span></div>
+        <div class="step"><div class="step__head"><span class="step__circle">5</span><span class="step__label">Подтверждение</span></div><span class="step__bar"></span></div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="container">
+        <p class="intro__eyebrow">Шаг 3 из 5</p>
+        <h1 class="intro__title">Выберите дату и время</h1>
+        <p class="intro__subtitle">Мастер: Дмитрий Орлов · услуги: стрижка и борода, 75 мин</p>
+      </div>
+    </section>
+
+    <section class="booking">
+      <div class="container booking__grid">
+        <!-- КАЛЕНДАРЬ -->
+        <div class="card calendar">
+          <div class="calendar__header">
+            <h2 class="calendar__title" id="current-month-year">Октябрь 2026</h2>
+            <div class="calendar__nav">
+              <button class="calendar__btn" id="prev-month" type="button" aria-label="Предыдущий месяц">‹</button>
+              <button class="calendar__btn" id="next-month" type="button" aria-label="Следующий месяц">›</button>
+            </div>
+          </div>
+          <div class="calendar__weekdays">
+            <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+          </div>
+          <!-- Сюда JS будет рендерить дни -->
+          <div class="calendar__days" id="calendar-days"></div>
+          
+          <div class="calendar__legend">
+            <span class="legend-item"><span class="legend-dot legend-dot--selected"></span> Выбрано</span>
+            <span class="legend-item"><span class="legend-dot legend-dot--today"></span> Сегодня</span>
+          </div>
+        </div>
+
+        <!-- СЛОТЫ ВРЕМЕНИ -->
+        <div class="card time-panel">
+          <h2 class="time-panel__title">Свободное время</h2>
+          <p class="time-panel__date" id="selected-date-header">Выберите дату в календаре</p>
+          <!-- Сюда JS будет рендерить слоты -->
+          <div class="time-slots" id="time-slots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- НИЖНЯЯ ПАНЕЛЬ -->
+    <section class="actions">
+      <div class="container actions__inner">
+        <div class="actions__info">
+          <p class="actions__label">Вы выбрали</p>
+          <p class="actions__value" id="bottom-bar-text">Дата и время не выбраны</p>
+        </div>
+        <div class="actions__buttons">
+          <button class="btn btn--outline" type="button">Назад</button>
+          <button class="btn btn--primary" id="next-step-btn" type="button" disabled>Далее</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__bottom">
+      <p class="footer__copy">© 2026 BARBER. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- Подключаем JS в конце body -->
+  <script src="script.js"></script>
+</body>
+</html>
