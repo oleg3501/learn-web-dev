@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# База данных SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Окружение и настройки редактора
+.env
+.vscode/
+.idea/
+.DS_Store
+*.log
