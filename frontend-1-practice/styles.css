@@ -1,0 +1,528 @@
+/* ===== СБРОС И БАЗОВЫЕ СТИЛИ ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f2ed;
+  color: #1a1a1a;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .logo {
+  font-family: 'Playfair Display', serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ===== ШАПКА ===== */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e8e4df;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.nav__link {
+  color: #555;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.nav__link:hover {
+  color: #1a1a1a;
+}
+
+/* ===== СТЕППЕР ===== */
+.steps {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e8e4df;
+  padding: 24px 0;
+}
+
+.steps__inner {
+  display: flex;
+  gap: 8px;
+}
+
+.step {
+  flex: 1;
+}
+
+.step__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.step__circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #e8e4df;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.step__label {
+  font-size: 14px;
+  color: #888;
+}
+
+.step__bar {
+  display: block;
+  height: 3px;
+  background-color: #e8e4df;
+  border-radius: 2px;
+}
+
+.step--done .step__circle {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.step--done .step__label {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.step--done .step__bar {
+  background-color: #1a1a1a;
+}
+
+.step--active .step__circle {
+  background-color: #b8935a;
+  color: #ffffff;
+}
+
+.step--active .step__label {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.step--active .step__bar {
+  background-color: #b8935a;
+}
+
+/* ===== ЗАГОЛОВОК СТРАНИЦЫ ===== */
+.intro {
+  padding: 48px 0 24px;
+}
+
+.intro__eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #b8935a;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.intro__title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.intro__subtitle {
+  font-size: 15px;
+  color: #666;
+}
+
+/* ===== БЛОК БРОНИРОВАНИЯ ===== */
+.booking {
+  padding-bottom: 24px;
+}
+
+.booking__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* ===== КАЛЕНДАРЬ ===== */
+.calendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.calendar__title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.calendar__nav {
+  display: flex;
+  gap: 8px;
+}
+
+.calendar__btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: #f5f2ed;
+  font-size: 20px;
+  color: #1a1a1a;
+  transition: background-color 0.2s ease;
+}
+
+.calendar__btn:hover {
+  background-color: #e8e4df;
+}
+
+.calendar__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.calendar__weekdays span {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+}
+
+.calendar__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.day {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: transparent;
+  font-size: 14px;
+  color: #1a1a1a;
+  transition: all 0.2s ease;
+}
+
+.day:hover:not(:disabled) {
+  background-color: #f5f2ed;
+}
+
+.day--today {
+  border: 1px solid #b8935a;
+  background-color: transparent;
+}
+
+.day--today:hover {
+  background-color: #f5f2ed;
+}
+
+.day--selected {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.day--selected:hover {
+  background-color: #333;
+}
+
+.calendar__legend {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #f0ece6;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #666;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.legend-dot--selected {
+  background-color: #1a1a1a;
+}
+
+.legend-dot--today {
+  background-color: transparent;
+  border: 1px solid #b8935a;
+}
+
+/* ===== ПАНЕЛЬ ВРЕМЕНИ ===== */
+.time-panel__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.time-panel__date {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.slot {
+  padding: 14px 8px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #e8e4df;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a1a;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+}
+
+.slot:hover:not(:disabled) {
+  border-color: #1a1a1a;
+  background-color: #faf8f5;
+}
+
+.slot--occupied {
+  background-color: #f0ece6;
+  border-color: #f0ece6;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.slot--occupied small {
+  font-size: 11px;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.slot--occupied:hover {
+  border-color: #f0ece6;
+  background-color: #f0ece6;
+}
+
+.slot--selected {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.slot--selected:hover {
+  background-color: #333;
+  border-color: #333;
+}
+
+/* ===== ПАНЕЛЬ ДЕЙСТВИЙ ===== */
+.actions {
+  padding: 24px 0 48px;
+}
+
+.actions__inner {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.actions__label {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+.actions__value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.actions__buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn--outline {
+  background-color: #ffffff;
+  border: 1px solid #e8e4df;
+  color: #1a1a1a;
+}
+
+.btn--outline:hover {
+  border-color: #1a1a1a;
+  background-color: #faf8f5;
+}
+
+.btn--primary {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.btn--primary:hover {
+  background-color: #333;
+  box-shadow: 0 4px 12px rgba(26, 26, 26, 0.25);
+}
+
+/* ===== ФУТЕР ===== */
+.site-footer {
+  background-color: #1a1a1a;
+  color: #c9c5c0;
+  padding: 56px 0 24px;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.logo--light {
+  color: #ffffff;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.footer__heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #b8935a;
+  margin-bottom: 16px;
+}
+
+.footer__text {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.footer__phone {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 1px solid #333;
+}
+
+.footer__copy {
+  font-size: 13px;
+  color: #888;
+}
+
+.footer__link {
+  font-size: 13px;
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+  color: #ffffff;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 768px) {
+  .booking__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .actions__inner {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .steps__inner {
+    flex-wrap: wrap;
+  }
+
+  .step {
+    flex: 1 1 30%;
+  }
+}
